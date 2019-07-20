@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="{{url_for('static', filename='buildImages.js')}}"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <!-- bootstrap navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Photo Picker</a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+                    <input id="input" class = "form-contorl mr-sm-2" type="text" placeholder="Search" aria-label="Search"name="image_search_term">
+                    <input id="input2" class = "form-contorl mr-sm-2" type="text" placeholder="Search" aria-label="Search"name="image_search_term">
+                    <select id="color">
+                        <option value="default">All Colors</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                </form>
+                
+            </div>
+        </nav>
+
+        <main role="main" class="container"></main>
+
+        <!-- input form for img db search term -->
+        <form action="/fetch",  method="post">
+            <!-- <input id="input" type="text" name="image_search_term"> -->
+            <!-- <input id="input2" type="text" name="image_search_term2"> -->
+            <!-- <input type="submit" value="Submit"> -->
+        </form>        
+
+
+    </body>
+</html>

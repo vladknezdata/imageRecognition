@@ -1,0 +1,17 @@
+img {
+    height: 20em;
+    width: 20em;
+    /* object-fit:cover; */
+}
+body {
+    padding-top: 5rem;
+  }
+.image_container {
+padding: 3rem 1.5rem;
+text-align: center;
+}
+main {
+    height:80em;
+    width:40em;
+    overflow:auto;
+}
